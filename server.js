@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
   let n = 0;
   res.writeHead(200, { "Content-Type": "text/html" });
 
-  while (n < 5) {
+  while (n < 50) {
     res.write("<br><br>Iteration : " + n + "<br>");
     res.write("<tr><td>Player 1</td> ");
     res.write("<td>Player 2</td> ");
