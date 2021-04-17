@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
   while (n <= 50) {
     res.write("<br><br>Iteration : " + n + "<br>");
-    res.write("<tr><td>Player 1</td> ");
+    res.write("<tr><td>Player 1 </td> ");
     res.write("<td>Player 2</td> ");
     res.write("<td>Player 3</td> ");
     res.write("<td>Player 4</td></tr><br>");
@@ -30,10 +30,10 @@ app.get("/", (req, res) => {
       var j = Math.floor(Math.random() * 3);
       player[i] = choice[j];
     }
-    res.write("<tr><td> " + player[0] + " </td> ");
-    res.write("<td> " + player[1] + " </td> ");
-    res.write("<td> " + player[2] + " </td> ");
-    res.write("<td> " + player[3] + " </td></tr><br><br>");
+    res.write("<tr><td> " + player[0] + "&nbsp; </td> ");
+    res.write("<td> &nbsp;" + player[1] + " </td> ");
+    res.write("<td> &nbsp;" + player[2] + " </td> ");
+    res.write("<td> &nbsp;" + player[3] + " </td></tr><br><br>");
     win = comapre(player[0], player[1]);
     if (win) {
       if (win === player[0]) scores[0][1] += 1;
@@ -65,36 +65,72 @@ app.get("/", (req, res) => {
       else scores[3][2] += 1;
     }
     n++;
-
-    res.write("<tr><td>--------</td><td>Player 1</td> ");
-    res.write("<td>Player 2</td> ");
-    res.write("<td>Player 3</td> ");
+    res.write("<tr><td>--------</td><td>Player 1</td> &nbsp;&nbsp;");
+    res.write("<td>Player 2</td> &nbsp;&nbsp;");
+    res.write("<td>Player 3</td> &nbsp;&nbsp;");
     res.write("<td>Player 4</td></tr><br>");
-
     res.write("<tr><td> Player 1 </td> ");
-    res.write("<td>" + scores[0][0] + "</td> ");
-    res.write("<td>" + scores[1][0] + "</td> ");
-    res.write("<td>" + scores[2][0] + "</td> ");
-    res.write("<td>" + scores[3][0] + "</td></tr><br>");
-
+    res.write("<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + scores[0][0] + "</td> ");
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + scores[1][0] + "</td> "
+    );
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        scores[2][0] +
+        "</td> "
+    );
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        scores[3][0] +
+        "</td></tr><br>"
+    );
     res.write("<tr><td> Player 2 </td> ");
-    res.write("<td>" + scores[0][1] + "</td> ");
-    res.write("<td>" + scores[1][1] + "</td> ");
-    res.write("<td>" + scores[2][1] + "</td> ");
-    res.write("<td>" + scores[3][1] + "</td></tr><br>");
-
+    res.write("<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + scores[0][1] + "</td> ");
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + scores[1][1] + "</td> "
+    );
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        scores[2][1] +
+        "</td> "
+    );
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        scores[3][1] +
+        "</td></tr><br>"
+    );
     res.write("<tr><td> Player 3 </td> ");
-    res.write("<td>" + scores[0][2] + "</td> ");
-    res.write("<td>" + scores[1][2] + "</td> ");
-    res.write("<td>" + scores[2][2] + "</td> ");
-    res.write("<td>" + scores[3][2] + "</td></tr><br>");
-
+    res.write("<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + scores[0][2] + "</td> ");
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + scores[1][2] + "</td> "
+    );
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        scores[2][2] +
+        "</td> "
+    );
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        scores[3][2] +
+        "</td></tr><br>"
+    );
     res.write("<tr><td> Player 4 </td> ");
-    res.write("<td>" + scores[0][3] + "</td> ");
-    res.write("<td>" + scores[1][3] + "</td> ");
-    res.write("<td>" + scores[2][3] + "</td> ");
-    res.write("<td>" + scores[3][3] + "</td></tr><br>");
+    res.write("<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + scores[0][3] + "</td> ");
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + scores[1][3] + "</td> "
+    );
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        scores[2][3] +
+        "</td> "
+    );
+    res.write(
+      "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        scores[3][3] +
+        "</td></tr><br>"
+    );
   }
+
   res.end();
 });
 
