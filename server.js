@@ -17,10 +17,10 @@ app.get("/", (req, res) => {
   ];
   var player = [4];
   var choice = ["Rock", "Paper", "Scissors"];
-  let n = 0;
+  let n = 1;
   res.writeHead(200, { "Content-Type": "text/html" });
 
-  while (n < 50) {
+  while (n <= 50) {
     res.write("<br><br>Iteration : " + n + "<br>");
     res.write("<tr><td>Player 1</td> ");
     res.write("<td>Player 2</td> ");
